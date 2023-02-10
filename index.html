@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script defer src="src/sound.js"></script>
+    <script defer src="src/animal.js"></script>
+    <script defer src="src/bee.js"></script>
+    <script defer src="src/wasp.js"></script>
+    <script defer src="src/game.js"></script>
+    <script defer src="src/main.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container" class="layout
+    ">
+        <div id="start" class="layout">
+            <div class="flex">
+                <div id="logo">
+                    <img src="assets/images/logo.svg" alt="logo-kill-the-wasp">
+                </div>
+                <div><label for="insert-player-name"><input type="text" name="" id="insert-player-name" value=""
+                            placeholder="Insert player name"></label></div>
+                <div class="flex-center"><button id="start-btn">Start</button></div>
+            </div>
+        </div>
+        <div id="playground" class="layout">
+            <div id="seconds"></div>
+            <div id="vitals">
+                <div><span>Dead wasps: </span><span id="killed-wasps">0</span></div>
+                <div id="bee-lives"></div>
+                <div><span>Dead bees: </span><span id="killed-bees">0</span></div>
+            </div>
+        </div>
+        <div id="final" class="layout">
+            <div id="final-wrapper">
+                <div id="result"><span id="result-player-name"></span></span><span>, you have killed
+                    </span><span id="current-score"></span></div>
+                <div id="last-games" class="flex-center">
+                    <div id="history">
+                        <div id="hitory-heading">
+                            <h5>Last games:</h5><span id="delete-history-container"><img id="delete-history"
+                                    class="icon" src="assets/images/delete-icon.svg" alt=""></span>
+                        </div>
+
+                        <ol id="marks"></ol>
+                    </div>
+                </div>
+
+                <div class="flex-center"><button id="replay-btn">Replay</button></div>
+
+
+
+            </div>
+        </div>
+        <div id="control-panel">
+            <div> <button id="music-btn"><img class="icon" src="assets/images/music-off-icon.svg" alt=""></button>
+            </div>
+            <div> <button id="sfx-btn"><img class="icon" src="assets/images/sfx-off-icon.svg" alt=""></button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="sound-effects">
+        <audio id="buzzing" src="assets/sound/buzzing.mp3"></audio>
+        <audio id="music" src="assets/sound/music.mp3"></audio>
+        <audio id="deadWasp" src="assets/sound/deadWasp.wav"></audio>
+        <audio id="deadBee" src="assets/sound/deadBee.wav"></audio>
+        <audio id="wizz" src="assets/sound/pressButton.mp3"></audio>
+    </div>
+</body>
+
+</html>
